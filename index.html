@@ -81,7 +81,7 @@
 
    function interpip() {
      var isFullScreen = document.fullscreenElement || document.mozFullScreenElement || document.webkitFullscreenElement;// 判断是否全屏
-    if (!isFullScreen) {
+    if (true) {
       var second = confirm("继续吗");
       if(second){
           launchFullScreen(button); // 整个页面全屏
