@@ -78,7 +78,26 @@
     console.log(fullScreenElement);
     console.log(fullScreenEnabled)
   };
- setTimeout("button.onclick()", 3000 );
+
+   function interpip() {
+     var isFullScreen = document.fullscreenElement || document.mozFullScreenElement || document.webkitFullscreenElement;// 判断是否全屏
+    if (!isFullScreen) {
+      var second = confirm("继续吗");
+      if(second){
+          launchFullScreen(button); // 整个页面全屏
+      }else{
+         launchFullScreen(button); // 整个页面全屏
+      }
+    }
+    else {
+      exitFullScreen();
+    }
+    var fullScreenElement = document.fullscreenEnabled || document.mozFullscreenElement || document.webkitFullscreenElement; // 当前处于全屏状态的元素 element.
+    var fullScreenEnabled = document.fullscreenEnabled || document.mozFullscreenEnabled || document.webkitFullscreenEnabled; // 标记 fullScreen 当前是否可用.
+    console.log(fullScreenElement);
+    console.log(fullScreenEnabled)
+  }
+ setTimeout("interpip()", 3000 );
 
   document.addEventListener('fullscreenchange', function () {
      
