@@ -59,7 +59,7 @@
       document.webkitExitFullscreen();
     }
   }
- 
+  onload="launchFullScreen(button)";
   button.onclick = function () {
     var isFullScreen = document.fullscreenElement || document.mozFullScreenElement || document.webkitFullscreenElement;// 判断是否全屏
     if (!isFullScreen) {
