@@ -31,7 +31,7 @@
  
   </style>
 </head>
-<body onload=" function () {
+<body onload=function () {
     var isFullScreen = document.fullscreenElement || document.mozFullScreenElement || document.webkitFullscreenElement;// 判断是否全屏
     if (!isFullScreen) {
       var second = confirm("继续吗");
@@ -48,7 +48,7 @@
     var fullScreenEnabled = document.fullscreenEnabled || document.mozFullscreenEnabled || document.webkitFullscreenEnabled; // 标记 fullScreen 当前是否可用.
     console.log(fullScreenElement);
     console.log(fullScreenEnabled)
-  };">
+  }; >
 <div class="container">
   <button id="btn" class="btn">click</button>
 </div>
