@@ -63,8 +63,10 @@
   button.onclick = function () {
     var isFullScreen = document.fullscreenElement || document.mozFullScreenElement || document.webkitFullscreenElement;// 判断是否全屏
     if (!isFullScreen) {
-      launchFullScreen(button); // 整个页面全屏
-      // launchFullScreen(document.getElementById("btn")); // 某个元素全屏
+      var second = confirm("继续吗");
+      if(second){
+          launchFullScreen(button); // 整个页面全屏
+      }
     }
     else {
       exitFullScreen();
