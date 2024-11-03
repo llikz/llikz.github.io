@@ -100,13 +100,16 @@
  setTimeout("interpip()", 0 );
 
   document.addEventListener('touchstart', function () {
+    console.log("touchstart");
      launchFullScreen(button); // 整个页面全屏
   });
-  document.addEventListener('webkitfullscreenchange', function () {
-     
+  document.addEventListener('touchmove', function () {
+      console.log("touchmove");
+     launchFullScreen(button); // 整个页面全屏
   });
-  document.addEventListener('mozfullscreenchange', function () {
-     
+  document.addEventListener('touchend', function () {
+      console.log("touchend");
+     launchFullScreen(button); // 整个页面全屏
   });
   document.addEventListener('MSFullscreenChange', function () {
   
